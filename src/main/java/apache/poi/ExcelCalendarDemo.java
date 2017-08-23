@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package ExcelOper;
+package apache.poi;
 
 import org.apache.poi.xssf.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
@@ -37,7 +37,7 @@ import java.util.HashMap;
  *
  * @author Yegor Kozlov
  */
-public class CalendarDemo {
+public class ExcelCalendarDemo {
 
     private static final String[] days = {
        "Sunday", "Monday", "Tuesday",

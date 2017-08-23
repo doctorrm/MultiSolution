@@ -3,8 +3,8 @@ package callback;
 public class Test {
 
 	public static void main(String[] args) {
-		Li li=new Li();
-		Wang wang=new Wang(li);
+		
+		Wang wang = new Wang(new Li());
 		wang.askQuestion("1+1=?");
 
 	}

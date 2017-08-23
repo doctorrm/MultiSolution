@@ -8,3 +8,5 @@
 - HDGF:提供读 Microsoft Visio 格式档案的功能。 
 - HPBF:提高读 Microsoft Publisher 格式档案的功能。
 - HSMF:提供读 Microsoft Outlook 格式档案的功能。
+
+Ctrl+Shift+F : make the code neat!
