@@ -1,51 +1,67 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.yi.maven</groupId>
-  <artifactId>MultiSolutions</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>MultiSolutions Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-    <dependency>
-	    <groupId>junit</groupId>
-	    <artifactId>junit</artifactId>
-	    <version>4.12</version>
-	</dependency>
-    
-	<!-- stackoverflow上人说只能用eclipse自带的servlet相关jar，不然会出错。或者要和eclipse自带的jar包版本要相同。添加请点击页面底部的第二个导航菜单项 -->
-	<dependency>
-		<groupId>javax.servlet</groupId>
-		<artifactId>servlet-api</artifactId>
-		<version>3.0-alpha-1</version>
-	</dependency>
-	 <!-- servlet类前面的注解要用到 -->
-	<dependency>
-		<groupId>javax.servlet</groupId>
-		<artifactId>javax.servlet-api</artifactId>
-		<version>4.0.0-b07</version>
-	</dependency>
-	<!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
-	<dependency>
-	    <groupId>commons-fileupload</groupId>
-	    <artifactId>commons-fileupload</artifactId>
-	    <version>1.3</version>
-	</dependency>
-	<!-- these two dependencies are for the Microsoft document -->
-	<dependency>
-	    <groupId>org.apache.poi</groupId>
-	    <artifactId>poi</artifactId>
-	    <version>3.16</version>
-	</dependency>
-	<dependency>
-	    <groupId>org.apache.poi</groupId>
-	    <artifactId>poi-ooxml</artifactId>
-	    <version>3.16</version>
-	</dependency>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.yi.maven</groupId>
+	<artifactId>MultiSolutions</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>MultiSolutions Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<spring.version>4.0.1.RELEASE</spring.version>
+		<jackson.version>2.9.0.pr4</jackson.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
 
-  </dependencies>
-  <build>
-    <finalName>MultiSolutions</finalName>
-  </build>
+		<!-- stackoverflow上人说只能用eclipse自带的servlet相关jar，不然会出错。或者要和eclipse自带的jar包版本要相同。添加请点击页面底部的第二个导航菜单项 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>3.0-alpha-1</version>
+		</dependency>
+		<!-- servlet类前面的注解要用到 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.0-b07</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3</version>
+		</dependency>
+		<!-- these two dependencies are for the Microsoft document -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.16</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.16</version>
+		</dependency>
+		<!-- For Jackson 2.x, declares jackson-databind, it will download its dependencies 
+			– jackson-core and jackson-annotations -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.sun.mail/javax.mail -->
+		<dependency>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>javax.mail</artifactId>
+			<version>1.6.0</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>MultiSolutions</finalName>
+	</build>
 </project>

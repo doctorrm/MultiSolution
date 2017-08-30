@@ -1,4 +1,5 @@
 package io;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
@@ -9,18 +10,23 @@ import java.io.OutputStream;
 
 /**
  * method4 (faster than)> method3 > method2 > method1
+ * 
  * @author Doctorwho
  */
-public class CopyFileWays{
+public class CopyFileWays {
 	public static void main(String[] args) throws Exception {
-		method4("d://korean.wma", "d://hellocopy.mp3");
+		method4("d://korean.wma", "d://hellocopy.wma");// music file. PS:java
+														// don't directly
+														// support mp3 read.
 	}
 
 	/**
-	 * buffer read & write byte array.
+	 * Buffer read & write byte array.<strong>(RECOMMEND)</strong>
 	 * 
-	 * @param origin
-	 * @param destination
+	 * @param origin,path
+	 *            of file which you want to read.
+	 * @param destination,copied
+	 *            file path.
 	 * @throws IOException
 	 */
 	@SuppressWarnings("unused")
@@ -37,7 +43,7 @@ public class CopyFileWays{
 	}
 
 	/**
-	 * buffer read & write single byte
+	 * Buffer read & write single byte
 	 * 
 	 * @param origin
 	 * @param destination
@@ -58,7 +64,7 @@ public class CopyFileWays{
 	}
 
 	/**
-	 * basic read & write byte array
+	 * Basic read & write byte array
 	 * 
 	 * @param origin
 	 * @param destination
@@ -78,7 +84,7 @@ public class CopyFileWays{
 	}
 
 	/**
-	 * basic read & write single byte
+	 * Basic read & write single byte
 	 * 
 	 * @param origin
 	 * @param destination

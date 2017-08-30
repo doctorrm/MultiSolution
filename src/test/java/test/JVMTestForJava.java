@@ -1,7 +1,19 @@
 package test;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.poi.ss.formula.functions.T;
+
 public class JVMTestForJava {
-	public static void main(String[] args) throws InterruptedException {
+	/**
+	 * 
+	 * @param <E>
+	 * @param args
+	 * @throws InterruptedException
+	 */
+	public static <E> void main(String[] args) throws InterruptedException {
+		List<?> arrayList=new ArrayList<T>();
 		
 		
 	}
