@@ -28,7 +28,7 @@ public class Conversion {
 		System.out.println(0xffff);     //65535 int是32位的，最高位已经是0，相当于0X0000ffff
 		System.out.println(0xff+"\n");       //255
 		
-		
+		//
 		System.out.println(((byte)0x90==0x90));
 	
 	}
