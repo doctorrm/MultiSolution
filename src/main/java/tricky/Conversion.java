@@ -21,14 +21,15 @@ public class Conversion {
 		System.out.println((char) (byte) -1);		// ?
 		System.out.println((int)(byte)-1);			//-1
 		System.out.println((int) (char) (byte) -1+"\n");// 2^16-1 = 65535
-	
+
 		
-		 System.out.println(0x80000001);//-2147483647 ，已经是32位，最高位是符号位
-		 System.out.println(0xcafebabe);//-889275714
-		 System.out.println(0xffff);     //65535 int是32位的，最高位已经是0，相当于0X0000ffff
-		 System.out.println(0xff+"\n");       //255
-	
-		 System.out.println(((byte)0x90==0x90));
+		System.out.println(0x80000001);//-2147483647 ，已经是32位，最高位是符号位
+		System.out.println(0xcafebabe);//-889275714
+		System.out.println(0xffff);     //65535 int是32位的，最高位已经是0，相当于0X0000ffff
+		System.out.println(0xff+"\n");       //255
+		
+		
+		System.out.println(((byte)0x90==0x90));
 	
 	}
 }
