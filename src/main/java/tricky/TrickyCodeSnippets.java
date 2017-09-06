@@ -10,6 +10,7 @@ public class TrickyCodeSnippets {
 	}
 
 /*******************************************************************************/
+
 	public static void trick1() {
 		/*
 		 * Topic:String Comparison and String Pool. Concepts: .equals() compares
@@ -20,8 +21,56 @@ public class TrickyCodeSnippets {
 		 */
 		String s2 = "I am unique!";
 		String s5 = "I am unique!";
-		System.out.println(s2 == s5);// true
+		System.out.println(s2 == s5);// true.
+		
+		/*the following are obviously create different String objects.
+		 *  As o1 and o2 are objects, o1==o2  compares the  memory location of 
+		 *  o1 & o2 and not the content.  For comparing content, use o1.equals (o2).
+		 */
+		String o1 = new String("kumar");
+		String o2 = new String("kumar");
+		if (o1 == o2) {
+			System.out.println("TRUE");//false.
+		} else {
+			System.out.println("FALSE");
+		}
 	}
+	
+/*******************************************************************************/
+	
+	/**
+	 * The reason for this is that the Java compiler parses the 
+	 * unicode character \u000d as a new line
+	 */
+	public static void trick2(){
+        // \u000d System.out.println("comment executed");
+	}
+	
+	public static void trick3(){
+	 loop1: for (int i = 0; i < 5; i++) {
+				for (int j = 0; j < 5; j++) {
+					if (i == 3)
+						break loop1;
+					System.out.println("i = " + i + " j = " + j);
+				}
+		}
+	}
+		  /*Output:
+		   *i = 0 j = 0
+			i = 0 j = 1
+			i = 0 j = 2
+			i = 0 j = 3
+			i = 0 j = 4
+			i = 1 j = 0
+			i = 1 j = 1
+			i = 1 j = 2
+			i = 1 j = 3
+			i = 1 j = 4
+			i = 2 j = 0
+			i = 2 j = 1
+			i = 2 j = 2
+			i = 2 j = 3
+			i = 2 j = 4*/
 
 /*******************************************************************************/
 	
@@ -67,6 +116,31 @@ public class TrickyCodeSnippets {
 	}*/
 	
 /*******************************************************************************/
-	
+/*	
+	*//**
+	 * key inside constructor is a local variable.
+	 * 
+	 * @param args
+	 *//*
+	public static void main(String args[]) {
+		MyClass mc = new MyClass();
+		System.out.println(mc.getNext());
+	}
+}
+
+class MyClass {
+	int key = -1;
+
+	MyClass() {
+		int key = 0;// not invoked! 
+	}
+
+	public int getNext() {
+		key++;// key=key+1=-1+1=0
+		return key;
+	}
+}*/
+
+/*******************************************************************************/
 
 }
